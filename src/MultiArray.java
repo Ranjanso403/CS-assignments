@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class MultiArray {
-    static int[][] multiarray = new int[10][10];
+    static int[][] multiarray = new int[12][12];
 
     public static void main(String[] args) {
 
@@ -10,7 +10,7 @@ public class MultiArray {
                 multiarray[i][j] = 1;
             }
         }
-        prints(patternCheckered());
+        prints(third_()); ////<----
 
 
     }
@@ -58,6 +58,17 @@ public class MultiArray {
         }
         return multiarray;
     }
+    public static int[][] third_() { //works with any array
+        for (int i = 0; i < multiarray.length; i++) {
+            for (int j = 0; j < multiarray[i].length; j++) {
+                multiarray[i][j] = 0;
+                if((i)%3==0&&(j+1)%3==0) {   multiarray[i][j]=3;} //1
+                if ((i + 1) % 3 == 0 && (j) % 3 == 0) { multiarray[i][j] = 3;} //3
+                if ((i + 2) % 3 == 0 && (j + 2) % 3 == 0) {multiarray[i][j] = 3;} //2
+            }
+        }
+        return multiarray;
+    }
 
     public static int[][] userChoice() {
         int count =1;
@@ -80,6 +91,7 @@ public class MultiArray {
         return multiarray;
 
         }
+
         static int sumArray(int[][] ar){
             int sum =0;
             for (int i = 0; i < ar.length; i++) {
