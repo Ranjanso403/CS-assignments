@@ -63,7 +63,7 @@ public class MultiArray {
             for (int j = 0; j < multiarray[i].length; j++) {
                 multiarray[i][j] = 0;
                 if((i)%3==0&&(j+1)%3==0) {   multiarray[i][j]=3;} //1
-                if ((i + 1) % 3 == 0 && (j) % 3 == 0) { multiarray[i][j] = 3;} //3
+                if ((i + 1) % 3 == 0 && j % 3 == 0) { multiarray[i][j] = 3;} //3
                 if ((i + 2) % 3 == 0 && (j + 2) % 3 == 0) {multiarray[i][j] = 3;} //2
             }
         }
